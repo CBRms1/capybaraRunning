@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Capybara Running</title>
+    <link href="img/Capybara icon.gif" rel="icon" type="image/x-icon">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+
+    <div>
+
+
+        <audio id="myAudio" autoplay loop>
+          <source src="sound/dirty.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <button class="soundtrack" onclick="muteUnmute()">
+          <img id="soundImage" src="img/volume_up.png" alt="Som Ativado">
+        </button>
+
+
+        
+    </div>
+    
+    
+    <main>
+        <section>
+            <!-- cenary -->
+            <div class="cenary" id="cenary">
+                <div class="ground"></div>
+                <!-- score -->
+                <div class="score">
+                    <p>Score: <score id="score">0</score>
+                    </p>
+                </div>
+
+                <!-- clouds -->
+                <div class="lowCloud cloud"></div>
+                <div class="fastCloud1 cloud"></div>
+                <div class="fastCloud2 cloud"></div>
+
+                <!-- capybara -->
+                <div class="cap" id="cap">
+                    <img src="img/Capybara running.gif" id="capImg">
+                    <div class="capHitBox" id="capHitBox"></div>
+                    <audio id="capJump">
+                        <source src="sound/jump.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+
+            </div>
+            <!-- game over screen -->
+            <dialog class="gameOverDialog" id="gameOverDialog">
+                <div class="content">
+                    <h2>GAME OVER</h2>
+                    <p>Total Score: <score id="totalScore"></score>
+                    </p><br><br>
+                    <button onclick="restart()" id="restartButton">Restart</button>
+                </div>
+            </dialog>
+        </section>
+    </main>
+
+  <footer>
+    <p>&copy; Cauber M. Streck | Henrike P. Braga | Todos os direitos reservados 2024 </p>
+  </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
