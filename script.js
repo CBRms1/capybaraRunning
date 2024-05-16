@@ -50,23 +50,23 @@ let canJump = true;
 
 const jump = () => {
     if (canJump) {
-      canJump = false;
-      setTimeout(() => {
-          canJump = true;
-      }, 1310);
-    
-      cap.classList.add('jump');
+        canJump = false;
+        setTimeout(() => {
+            canJump = true;
+        }, 1310);
 
-      capImg.src = 'img/Capybara jumping.gif';
+        cap.classList.add('jump');
 
-      var capSound = document.getElementById("capJump");
-      capSound.play();
+        capImg.src = 'img/Capybara jumping.gif';
 
-      setTimeout(() => {
-        cap.classList.remove('jump');
-        capImg.src = 'img/Capybara running.gif';
-        capSound.pause();
-      }, 1300);
+        var capSound = document.getElementById("capJump");
+        capSound.play();
+
+        setTimeout(() => {
+            cap.classList.remove('jump');
+            capImg.src = 'img/Capybara running.gif';
+            capSound.pause();
+        }, 1300);
     }
 }
 
